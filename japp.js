@@ -23,3 +23,13 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+
+document.querySelectorAll('.project-item').forEach(function (item) {
+	item.addEventListener('click', function (event) {
+		const link = item.getAttribute('data-link');
+		if (link) {
+			window.open(link, '_blank');
+		}
+	});
+});
